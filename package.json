@@ -1,0 +1,21 @@
+{
+  "name": "@rofram/react-drag-it",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mobx": "^6.5.0",
+    "mobx-react-lite": "^3.3.0",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.43",
+    "typescript": "^4.6.3"
+  }
+}

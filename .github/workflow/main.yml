@@ -1,0 +1,30 @@
+name: Node.js Package
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  publish-gpr:
+    #needs: build
+    runs-on: ubuntu
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+          #cache: 'yarn'
+          registry-url: https://npm.pkg.github.com/
+          scope: '@rofram'
+      - run: npm install
+      #- run: yarn test
+      - run: npm run build
+      - name: Delete Old Package
+        uses: actions/delete-package-versions@v1
+        with:
+          package-name: 'react-drag-it'
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
