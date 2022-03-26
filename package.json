@@ -2,7 +2,7 @@
   "name": "@rofram/react-drag-it",
   "version": "1.0.0",
   "description": "",
-  "main": "dist",
+  "main": "lib",
   "scripts": {
     "build": "tsc"
   },
