@@ -1,3 +1,3 @@
-import dragIt from "./dragIt";
+import { DragIt } from "./dragIt";
 
-export default dragIt;
+export default { DragIt };

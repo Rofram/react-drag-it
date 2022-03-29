@@ -1,9 +1,6 @@
 /// <reference types="react" />
 interface DragItProps extends React.HTMLAttributes<HTMLDivElement> {
 }
-declare function DragIt({ children, ...props }: DragItProps): JSX.Element;
-declare const _default: typeof DragIt & {
-    displayName: string;
-};
-export default _default;
+export declare function DragIt({ children, ...props }: DragItProps): JSX.Element;
+export {};
 //# sourceMappingURL=dragIt.d.ts.map
