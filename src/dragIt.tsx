@@ -18,6 +18,7 @@ export function DragIt({ children, ...props }: DragItProps) {
       }
     }
     console.log(`onMove: ${e.clientX} ${e.clientY}`)
+    console.log(`isDragging: ${dragging}`)
   }
 
   function onMouseDown(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
