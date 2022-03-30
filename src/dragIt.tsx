@@ -1,4 +1,3 @@
-import { observer } from 'mobx-react-lite'
 import { useRef } from 'react'
 
 interface DragItProps extends React.HTMLAttributes<HTMLDivElement> {}

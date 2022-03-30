@@ -1,6 +1,3 @@
 import { DragIt } from "./dragIt";
-declare const _default: {
-    DragIt: typeof DragIt;
-};
-export default _default;
+export default DragIt;
 //# sourceMappingURL=index.d.ts.map
