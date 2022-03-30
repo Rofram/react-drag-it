@@ -8,8 +8,6 @@ export function DragIt({ children, ...props }: DragItProps) {
   let containerPosition = { x: 0, y: 0 }
   let mouseOffset = { x: 0, y: 0 }
 
-  console.log(dragging)
-
   function onMove(e: React.MouseEvent<HTMLDivElement>) {
     if (dragging) {
       if (divRef.current) {
@@ -22,7 +20,7 @@ export function DragIt({ children, ...props }: DragItProps) {
   }
 
   function onMouseDown(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
-    dragging = true
+    setIsDragging(true)
     mouseOffset.x = e.clientX
     mouseOffset.y = e.clientY
     containerPosition.x = divRef.current?.offsetLeft ?? 0
@@ -30,13 +28,17 @@ export function DragIt({ children, ...props }: DragItProps) {
     console.log(`onMouseDown: ${e.clientX} ${e.clientY}`)
   }
 
+  function setIsDragging(isDragging: boolean) {
+    dragging = isDragging
+  }
+
   return (
     <div
       ref={divRef}
       onMouseDown={onMouseDown}
-      onMouseUp={() => dragging = false}
+      onMouseUp={() => setIsDragging(false)}
       onMouseMove={onMove}
-      onMouseLeave={() => dragging = false}
+      onMouseLeave={() => setIsDragging(false)}
       style={{ display: 'absolute' }}
       {...props}
     >{children}</div>

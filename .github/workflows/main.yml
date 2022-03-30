@@ -19,8 +19,8 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@rofram'
       - run: npm install
+      - run: npm run build
       #- run: yarn test
-      # - run: npm run build
       # - name: Delete Old Package
       #   uses: actions/delete-package-versions@v1
       #   with:
